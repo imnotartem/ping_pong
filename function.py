@@ -15,3 +15,17 @@ class Board(pygame.Rect):
         if self.MOVE['DOWN'] and self.bottom < setting_win['HEIGHT']:
             self.y += self.SPEED
         pygame.draw.rect(window, self.COLOR, self)
+
+class Ball():
+    def __init__(self, x, y, radius, color= [100,200,123], speed = setting_ball['SPEED']):
+        self.X = x
+        self.Y = y
+        self.RADIUS = radius
+        self.COLOR = color
+        self.SPEED = speed
+        self.SPEED_X = self.SPEED
+        self.SPEED_Y = 0
+
+    def move(self, window, board_left, board_right):
+        pass
+
